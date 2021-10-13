@@ -237,10 +237,8 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
     li = lidraughts.Lidraughts(CONFIG["token"], CONFIG["url"], __version__)
     user_profile = li.get_profile()
     username = user_profile["username"]
-    conversation.send_reply(SendLine('player'), f'{username} running github.com/srimethan/lidraughts-bot-heroku')
-    conversation.send_reply(SendLine('spectator'), f'{username} running github.com/srimethan/lidraughts-bot-heroku')
-    conversation.send_reply(SendLine('player'), f'Good Luck!')
-    conversation.send_reply(SendLine('spectator'), f'Good Luck!')
+    conversation.send_reply(SendLine('player'), f'Have Fun D:!')
+    conversation.send_reply(SendLine('spectator'), f'Have Fun D:!')
     
     variant=game.perf_name
     
@@ -319,8 +317,8 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
         except StopIteration:
             break
     
-    conversation.send_reply(SendLine('player'), f'Good Game!')
-    conversation.send_reply(SendLine('spectator'), f'Good Game!')
+    conversation.send_reply(SendLine('player'), f'Good Game,Thank you !')
+    conversation.send_reply(SendLine('spectator'), f'Good Game,Thank you !')
 
     engine.stop()
     engine.quit()
